@@ -5,7 +5,8 @@ from telegram import Update
 from telegram.ext import ApplicationBuilder, CommandHandler, MessageHandler, filters, ContextTypes
 
 TELEGRAM_TOKEN = "8843314860:AAEohBPUXZ_8hkuAdIyPWakRyRyIEUu8y3M"
-ANTHROPIC_API_KEY = "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"
+ANTHROPIC_API_KEY = os.getenv("ANTHROPIC_API_KEY", "")
+
 
 client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
